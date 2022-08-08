@@ -42,6 +42,14 @@ namespace VRM
         [MenuItem(UserMenuPrefix + "/Load SpringBone from JSON", priority = 23)]
         private static void LoadSpringBoneFromJson() => VRMSpringBoneUtilityEditor.LoadSpringBoneFromJson();
 
+        [MenuItem(UserMenuPrefix + "/Extention Version: " + RongChaVRMExtentionVersion.RONGCHA_VRM_EXTENTION_VERSION, validate = true)]
+        private static bool ShowExtentionVersionValidation() => false;
+
+        [MenuItem(UserMenuPrefix + "/Extention Version: " + RongChaVRMExtentionVersion.RONGCHA_VRM_EXTENTION_VERSION, priority = 50)]
+        private static void ShowExtentionVersion() { }
+
+    //    [MenuItem(UserMenuPrefix + "/RongCha VRM Extention Settings", priority = 51)]
+    //    private static void ShowRongChaVrmExtentionSettings() => VRMExporterWizard.OpenExportMenu();
 
 #if VRM_DEVELOP
         [MenuItem(DevelopmentMenuPrefix + "/Generate Serialization Code", priority = 30)]
